@@ -37,3 +37,4 @@ https://www.programiz.com/python-programming/datetime/current-datetime
 https://docs.python.org/3/library/urllib.request.html
 https://www.educative.io/edpresso/how-to-find-the-length-of-a-string-in-python
 https://stackoverflow.com/questions/4776924/how-to-safely-get-the-file-extension-from-a-url
+https://stackoverflow.com/questions/225086/rfc-1123-date-representation-in-python

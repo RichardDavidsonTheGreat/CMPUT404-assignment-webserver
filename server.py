@@ -4,6 +4,10 @@ import os
 import urllib.request
 from datetime import date
 
+from wsgiref.handlers import format_date_time
+from datetime import datetime
+from time import mktime
+
 
 # Copyright 2013 Abram Hindle, Eddie Antonio Santos
 # 
@@ -34,7 +38,10 @@ from datetime import date
 class MyWebServer(socketserver.BaseRequestHandler):
 
     def handle(self):
-        todays_date = date.today() #https://www.programiz.com/python-programming/datetime/current-datetime for the idea on how to get date
+        #code for how to get the date in the correct format from https://stackoverflow.com/questions/225086/rfc-1123-date-representation-in-python
+        unformatted_dateime = datetime.now()
+        stamp = mktime(unformatted_dateime.timetuple())
+        todays_date = (format_date_time(stamp))
         decoded_response = ""
         while True:
             one_byte = self.request.recv(1).decode()
